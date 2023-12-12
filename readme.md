@@ -77,6 +77,14 @@ python get_sentence_simi.py
 ```
 
 You can also use the `tool/get_sentence_simi.py` script to calculate the similarity between the generated descriptions and the ground truth descriptions of your own data. 
+
+## Result
+You can find your result in the `result` folder.
+
+We also provide one of our results in the `result` folder,which is result.txt. 
+
+It uses the prompt"请用中文用一句话描述上面给出的音频中说话人的情感：",You can use one of the training prompts or your own prompt.
+
 ## Citation
 
 If you use this repository in your research, please cite our paper:

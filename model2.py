@@ -268,7 +268,10 @@ class MotionAudio(pl.LightningModule):
     def test_step(self, batch, batch_idx):
         audio,_,describtion,fpath=batch
         output_tokens,prompt=self.inference(audio)
-        test_file="result.txt"
+        path=os.path.dirname(os.path.abspath(__file__))
+        path=os.path.dirname(path)
+        test_file="result/result_1.txt"
+        test_file=os.path.join(path,test_file)
         with open(test_file,"a",encoding="utf-8") as f:
             f.write("file: "+fpath[0]+"\n")
             #f.write("prompt: "+prompt+"\n")

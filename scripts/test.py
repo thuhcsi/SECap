@@ -29,6 +29,8 @@ torch.cuda.empty_cache()
 state_dict = torch.load("../model.ckpt",map_location=torch.device('cpu'))
 model.load_state_dict(state_dict)
 torch.cuda.empty_cache()
+#In this case, we use 8 GPUs to test the model
+#It will take about 10 minutes to test the model on 8 V100 GPUs
 
 trainer = pl.Trainer(
     accelerator='gpu',
