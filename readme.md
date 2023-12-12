@@ -7,7 +7,7 @@ This repository contains the implementation of the paper "SECap: Speech Emotion 
 ## Datset
 We public the 600-test dataset in the `dataset` folder. The dataset consists of 600 wav audio files and their corresponding emotion descriptions. 
 
-The folder contains the following files:
+The `dataset` folder contains the following files:
 
 wav: the folder contains 600 wav audio files.
 
@@ -29,9 +29,9 @@ To install the project dependencies, use the following command:
 conda create --name secap --file requirements.txt
 
 ## Pretrained Model
-You can download the pretrained model from [here](https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing) and put it in the `EmotionCaption` folder.
+You can download the pretrained model from [todo][here](https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing) and put it in the main folder.
 
-Also, you need to download the pretrained weights folder from [here](https://dl.fbaipublicfiles.com/fairseq/wav2vec/wav2vec_small.pt) and put it in the `EmotionCaption` folder.
+Also, you need to download the pretrained weights folder from [todo][here](todo) and put it in the main folder.
 
 ## Inference and Testing
 
