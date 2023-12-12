@@ -27,8 +27,7 @@ AM_Dataloader = DataLoader(AM_Dataset, batch_size=batch_size, shuffle=True, coll
 
 torch.cuda.empty_cache()
 state_dict = torch.load("../model.ckpt",map_location=torch.device('cpu'))
-model.load_state_dict(state_dict,strict=False)
-model=model
+model.load_state_dict(state_dict)
 torch.cuda.empty_cache()
 
 trainer = pl.Trainer(

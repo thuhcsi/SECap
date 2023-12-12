@@ -186,5 +186,5 @@ def predictSimiWrapper(fpath):
     
 
 if __name__=="__main__":
-    predictSimiWrapper("result.txt")
+    predictSimiWrapper("../scripts/result.txt")
 

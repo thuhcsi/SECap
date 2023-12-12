@@ -25,17 +25,19 @@ git clone https://github.com/xuyaoxun/SECaps.git
 ## Installation
 
 To install the project dependencies, use the following command:
-
-conda create --name secap --file requirements.txt
+```
+conda env create -f environment.yml
+```
 
 ## Pretrained Model
-You can download the pretrained model from [todo][here](https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing) and put it in the main folder.
+You can download the pretrained model from [here](https://pan.quark.cn/s/1c3deee6cd68) and put it in the main folder.
 
-Also, you need to download the pretrained weights folder from [todo][here](todo) and put it in the main folder.
+Also, you need to download the pretrained weights folder from [here](https://pan.quark.cn/s/53891d06c3db) and put it in the main folder.
 
 ## Inference and Testing
 
 If you want to test the model on your own data, use the `inference.py` script. For example:
+
 ```
 cd scripts
 python inference.py --wavdir /path/to/your/audio.wav
@@ -62,6 +64,9 @@ python train.py
 
 
 ## Calculating Similarity
+We use the sentence similarity to evaluate the generated descriptions.
+
+Specifically, we generate the descriptions of the 600 audio files for 8 times and calculate the similarity between each sentence and the other 7 sentences, and remove the 3 sentences with the lowest average similarity. We use these 5 sentences as the final generated descriptions and calculate the similarity between the generated descriptions and the ground truth descriptions.
 
 If you want to calculate the similarity between the generated descriptions and the ground truth descriptions, use the `tool/get_sentence_simi.py` script. For example:
 
@@ -70,6 +75,8 @@ cd tool
 # modify the path in get_sentence_simi.py
 python get_sentence_simi.py
 ```
+
+You can also use the `tool/get_sentence_simi.py` script to calculate the similarity between the generated descriptions and the ground truth descriptions of your own data. 
 ## Citation
 
 If you use this repository in your research, please cite our paper:
