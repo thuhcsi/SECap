@@ -1,4 +1,4 @@
-name: base
+name: secap
 channels:
   - defaults
 dependencies:
