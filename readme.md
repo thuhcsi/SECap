@@ -1,5 +1,7 @@
 # SECAP: Speech Emotion Captioning with Large Language Model
 
+![model](picture/model.png)
+
 This repository contains the implementation of the paper "SECap: Speech Emotion Captioning with Large Language Model". It includes the model code, training and testing scripts, and a test dataset. The test dataset consists of 600 wav audio files and their corresponding emotion descriptions.
 
 ## Download
