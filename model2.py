@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import lightning.pytorch as pl
-from Qformer import BertConfig, BertLMHeadModel
+from module.Qformer import BertConfig, BertLMHeadModel
 from transformers import (
     Wav2Vec2FeatureExtractor,
     HubertModel,
@@ -9,12 +9,13 @@ from transformers import (
     BertModel,
     LlamaTokenizer
 )
-from modeling_llama import LlamaForCausalLM
+from module.modeling_llama import LlamaForCausalLM
 from CLUB_modules.mi_estimators import *
-from get_sentence_simi import SimiCal
+from tool.get_sentence_simi import SimiCal
 import torch.nn.functional as F
 from transformers import StoppingCriteria, StoppingCriteriaList
 import numpy as np
+import os
 
 class KeywordsStoppingCriteria(StoppingCriteria):
     def __init__(self, keywords_ids:list):
@@ -30,8 +31,15 @@ class MotionAudio(pl.LightningModule):
         self,
         hubert_ckpt="weights/models--TencentGameMate--chinese-hubert-large/snapshots/90cb660492214f687e60f5ca509b20edae6e75bd",
         text2vec_ckpt="weights/models--shibing624--text2vec-base-chinese/snapshots/26420fdf61ddfd92fafbaf3bc21a7c06b1812248",
-        llama_ckpt="weights/models--minlik--chinese-llama-7b-merged/snapshots/1ca4d87576f1fef4d44a949fb65bbe6b96675872"        ):
+        llama_ckpt="weights/models--minlik--chinese-llama-7b-merged/snapshots/1ca4d87576f1fef4d44a949fb65bbe6b96675872"):
         super(MotionAudio,self).__init__()
+        
+        #path
+        current_directory = os.path.dirname(os.path.abspath(__file__))
+        hubert_ckpt = os.path.join(current_directory, hubert_ckpt)
+        text2vec_ckpt = os.path.join(current_directory, text2vec_ckpt)
+        llama_ckpt = os.path.join(current_directory, llama_ckpt)
+
         #hubert
         self.hubert_model=HubertModel.from_pretrained(hubert_ckpt)
         self.hubert_feature_extractor=Wav2Vec2FeatureExtractor.from_pretrained(hubert_ckpt)
@@ -66,14 +74,16 @@ class MotionAudio(pl.LightningModule):
         
         
     def init_Qformer(self,num_query_token, vision_width, cross_attention_freq=2):
-        encoder_config = BertConfig.from_pretrained("weights/models--bert-base-chinese/snapshots/8d2a91f91cc38c96bb8b4556ba70c392f8d5ee55")
+        path=os.path.dirname(os.path.abspath(__file__))
+        config_path=os.path.join(path,"weights/models--bert-base-chinese/snapshots/8d2a91f91cc38c96bb8b4556ba70c392f8d5ee55")
+        encoder_config = BertConfig.from_pretrained(config_path)
         encoder_config.encoder_width = vision_width
         # insert cross-attention layer every other block
         encoder_config.add_cross_attention = True
         encoder_config.cross_attention_freq = cross_attention_freq
         encoder_config.query_length = num_query_token
         Qformer = BertLMHeadModel(config=encoder_config)
-        ckpt="weights/models--bert-base-chinese/snapshots/8d2a91f91cc38c96bb8b4556ba70c392f8d5ee55/pytorch_model.bin"
+        ckpt=os.path.join(path,"weights/models--bert-base-chinese/snapshots/8d2a91f91cc38c96bb8b4556ba70c392f8d5ee55/pytorch_model.bin")
         Qformer.load_state_dict(torch.load(ckpt),strict=False)
 
         query_tokens = nn.Parameter(
@@ -273,3 +283,9 @@ class MotionAudio(pl.LightningModule):
 
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+if __name__ == "__main__":
+    model=MotionAudio()
+    print(count_parameters(model))
+    #print(model)
+    #print(model.parameters())

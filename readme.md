@@ -17,10 +17,8 @@ Also, you need to download the pretrained weights folder from [here](https://dl.
 
 If you want to test the model on your own data, use the `inference.py` script. For example:
 ```
-
 python inference.py --wavdir /path/to/your/audio.wav
-
-`````
+```
 
 
 If you want to test the model on the provided test dataset of 600 audio files and their emotion descriptions, use the `test.py` script. For example:
@@ -40,6 +38,15 @@ python train.py
 ```
 
 
+## Calculating Similarity
+
+If you want to calculate the similarity between the generated descriptions and the ground truth descriptions, use the `tool/get_sentence_simi.py` script. For example:
+
+```
+cd tool
+# modify the path in get_sentence_simi.py
+python get_sentence_simi.py
+```
 ## Citation
 
 If you use this repository in your research, please cite our paper:

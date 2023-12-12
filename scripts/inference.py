@@ -1,4 +1,8 @@
-from dataloader1 import AudioMotionDataset, collate_fn
+import sys
+
+sys.path.append("..")
+
+from dataloader.dataloader import AudioMotionDataset, collate_fn
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset, DataLoader, RandomSampler
 from transformers import AutoTokenizer
@@ -12,12 +16,17 @@ import lightning.pytorch as pl
 import torch.optim as optim
 import math
 import argparse
+import soundfile as sf
+import torchaudio
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--wavdir", type=str, default="wavpath")
+    path=os.path.dirname(os.path.abspath(__file__))
+    path=os.path.dirname(path)
+    path=os.path.join(path,'dataset/wav/tx_emotion_00201000015.wav')
+    #you can change the wavdir to your own wav file
+    parser.add_argument("--wavdir", type=str, default=path)
     model=MotionAudio()
-    import soundfile as sf
-    import torchaudio
 
     wavdir=parser.parse_args().wavdir
 
@@ -27,7 +36,7 @@ if __name__ == "__main__":
     wavform=[waveform]
 
     torch.cuda.empty_cache()
-    state_dict = torch.load("model.ckpt",map_location=torch.device('cpu'))["state_dict"]
+    state_dict = torch.load("../model.ckpt",map_location=torch.device('cpu'))["state_dict"]
     model.load_state_dict(state_dict)
     model=model.to(torch.device('cuda'))
     model.inference(wavform)

@@ -8,13 +8,18 @@ import torch
 from tqdm import tqdm
 import sys
 import json
+import os
 
 class SimiCal():
     def __init__(self, device=torch.device('cuda')):        
         # Load model from HuggingFace Hub
         self.device = device
-        self.tokenizer = BertTokenizer.from_pretrained('weights/simi_berttokenizer')
-        self.model = BertModel.from_pretrained('weights/simi_shibing624_text2vec-base-chinese-paraphrase').to(device)
+        path=os.path.dirname(os.path.abspath(__file__))
+        path=os.path.dirname(path)
+        tokenizer_path=os.path.join(path,'weights/simi_berttokenizer')
+        model_path=os.path.join(path,'weights/simi_shibing624_text2vec-base-chinese-paraphrase')
+        self.tokenizer = BertTokenizer.from_pretrained(tokenizer_path)
+        self.model = BertModel.from_pretrained(model_path).to(device)
 
     # Mean Pooling - Take attention mask into account for correct averaging
     def mean_pooling(self, model_output, attention_mask):
@@ -181,5 +186,5 @@ def predictSimiWrapper(fpath):
     
 
 if __name__=="__main__":
-    predictSimiWrapper("test_new.txt")
+    predictSimiWrapper("result.txt")
 
