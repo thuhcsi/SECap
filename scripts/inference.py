@@ -18,6 +18,7 @@ import math
 import argparse
 import soundfile as sf
 import torchaudio
+import os
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -36,7 +37,7 @@ if __name__ == "__main__":
     wavform=[waveform]
 
     torch.cuda.empty_cache()
-    state_dict = torch.load("../model.ckpt",map_location=torch.device('cpu'))["state_dict"]
+    state_dict = torch.load("../model.ckpt",map_location=torch.device('cpu'))
     model.load_state_dict(state_dict)
     model=model.to(torch.device('cuda'))
     model.inference(wavform)

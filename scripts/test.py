@@ -26,7 +26,7 @@ AM_Dataset = AudioMotionDataset("../dataset/text.txt","../dataset/wav.scp","../d
 AM_Dataloader = DataLoader(AM_Dataset, batch_size=batch_size, shuffle=True, collate_fn=collate_fn,prefetch_factor=2,persistent_workers=True,num_workers=8)
 
 torch.cuda.empty_cache()
-state_dict = torch.load("../model.ckpt",map_location=torch.device('cpu'))["state_dict"]
+state_dict = torch.load("../model.ckpt",map_location=torch.device('cpu'))
 model.load_state_dict(state_dict,strict=False)
 model=model
 torch.cuda.empty_cache()

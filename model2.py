@@ -287,5 +287,4 @@ def count_parameters(model):
 if __name__ == "__main__":
     model=MotionAudio()
     print(count_parameters(model))
-    #print(model)
-    #print(model.parameters())
+

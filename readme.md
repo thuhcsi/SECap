@@ -4,6 +4,13 @@
 
 This repository contains the implementation of the paper "SECap: Speech Emotion Captioning with Large Language Model". It includes the model code, training and testing scripts, and a test dataset. The test dataset consists of 600 wav audio files and their corresponding emotion descriptions.
 
+## Datset
+We public the 600-test dataset in the `dataset` folder. The dataset consists of 600 wav audio files and their corresponding emotion descriptions. 
+The folder contains the following files:
+wav: the folder contains 600 wav audio files.
+text.txt: the file contains the transcribtion of the 600 audio files.
+fid2captions.json: the file contains the emotion captions of the 600 audio files.
+
 ## Download
 You can simply download the repository by using the following command:
 
