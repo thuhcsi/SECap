@@ -6,9 +6,13 @@ This repository contains the implementation of the paper "SECap: Speech Emotion 
 
 ## Datset
 We public the 600-test dataset in the `dataset` folder. The dataset consists of 600 wav audio files and their corresponding emotion descriptions. 
+
 The folder contains the following files:
+
 wav: the folder contains 600 wav audio files.
+
 text.txt: the file contains the transcribtion of the 600 audio files.
+
 fid2captions.json: the file contains the emotion captions of the 600 audio files.
 
 ## Download
