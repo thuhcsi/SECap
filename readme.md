@@ -6,25 +6,39 @@ This repository contains the implementation of the paper "SECap: Speech Emotion 
 
 To install the project dependencies, use the following command:
 
-pip install -r requirements.txt
+conda create --name secap --file requirements.txt
+
+## Pretrained Model
+You can download the pretrained model from [here](https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing) and put it in the `EmotionCaption` folder.
+
+Also, you need to download the pretrained weights folder from [here](https://dl.fbaipublicfiles.com/fairseq/wav2vec/wav2vec_small.pt) and put it in the `EmotionCaption` folder.
 
 ## Inference and Testing
 
 If you want to test the model on your own data, use the `inference.py` script. For example:
+```
 
 python inference.py --wavdir /path/to/your/audio.wav
 
+`````
+
+
 If you want to test the model on the provided test dataset of 600 audio files and their emotion descriptions, use the `test.py` script. For example:
 
+```
 python test.py 
+```
+
 
 ## Training
 
 If you want to train the model, use the `train.py` script. But first, you need to create a training dataset. The training dataset should be a folder containing audio files and their corresponding emotion descriptions.
 For example:
 
-
+```
 python train.py 
+```
+
 
 ## Citation
 
