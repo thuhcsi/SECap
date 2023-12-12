@@ -2,6 +2,13 @@
 
 This repository contains the implementation of the paper "SECap: Speech Emotion Captioning with Large Language Model". It includes the model code, training and testing scripts, and a test dataset. The test dataset consists of 600 wav audio files and their corresponding emotion descriptions.
 
+## Download
+You can simply download the repository by using the following command:
+
+```
+git clone https://github.com/xuyaoxun/SECaps.git
+```
+
 ## Installation
 
 To install the project dependencies, use the following command:
@@ -17,6 +24,7 @@ Also, you need to download the pretrained weights folder from [here](https://dl.
 
 If you want to test the model on your own data, use the `inference.py` script. For example:
 ```
+cd scripts
 python inference.py --wavdir /path/to/your/audio.wav
 ```
 
@@ -24,6 +32,7 @@ python inference.py --wavdir /path/to/your/audio.wav
 If you want to test the model on the provided test dataset of 600 audio files and their emotion descriptions, use the `test.py` script. For example:
 
 ```
+cd scripts
 python test.py 
 ```
 
@@ -34,6 +43,7 @@ If you want to train the model, use the `train.py` script. But first, you need t
 For example:
 
 ```
+cd scripts
 python train.py 
 ```
 
