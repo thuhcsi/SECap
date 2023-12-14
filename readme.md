@@ -30,9 +30,16 @@ conda env create -f environment.yml
 ```
 
 ## Pretrained Model
-You can download the pretrained model from [here](https://pan.quark.cn/s/1c3deee6cd68) and put it in the main folder.
+You can download the pretrained model from [kuake pandownload](https://pan.quark.cn/s/1c3deee6cd68) or [google drive](https://drive.google.com/file/d/11q_ZXj0wXnLcw3nH-m8LyI_egMMDaMvR/view?usp=drive_link) and put it in the main folder.
 
-Also, you need to download the pretrained weights folder from [here](https://pan.quark.cn/s/53891d06c3db) and put it in the main folder.
+Also, you need to download the pretrained weights folder from [kuake pandownload](https://pan.quark.cn/s/53891d06c3db) or [google drive](https://drive.google.com/file/d/1wDmijmOhvpgCXdlwvJ_XWm4QsPzLJxFk/view?usp=drive_link) and put it in the main folder.
+
+---
+
+Meanwhile. we have provided the pretrained checkpoints in the huggingface model hub. You can download the pretrained checkpoints from [here](https://huggingface.co/xuyaoxun/SECap) and put it in the main folder.
+
+---
+
 
 ## Inference and Testing
 
@@ -87,7 +94,7 @@ It uses the prompt"请用中文用一句话描述上面给出的音频中说话�
 
 ## Citation
 
-If you use this repository in your research, please cite our paper:
+If you use this repository in your research, please kindly cite our paper:
 
 @article{SECap,
   title={SECap: Speech Emotion Captioning with Large Language Model},
