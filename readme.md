@@ -36,7 +36,7 @@ Also, you need to download the pretrained weights folder from [kuake pandownload
 
 ---
 
-Meanwhile. we have provided the pretrained checkpoints in the huggingface model hub. You can download the pretrained checkpoints from [here](https://huggingface.co/xuyaoxun/SECap) and put it in the main folder.
+Meanwhile. we have provided the pretrained checkpoints in the huggingface model hub. You can download the pretrained checkpoints from [here](https://huggingface.co/xuyaoxun/SECaps) and put it in the main folder.
 
 ---
 
