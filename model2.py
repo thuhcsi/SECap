@@ -269,7 +269,6 @@ class MotionAudio(pl.LightningModule):
         audio,_,describtion,fpath=batch
         output_tokens,prompt=self.inference(audio)
         path=os.path.dirname(os.path.abspath(__file__))
-        path=os.path.dirname(path)
         test_file="result/result_1.txt"
         test_file=os.path.join(path,test_file)
         with open(test_file,"a",encoding="utf-8") as f:
