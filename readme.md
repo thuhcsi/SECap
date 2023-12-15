@@ -19,7 +19,7 @@ fid2captions.json: the file contains the emotion captions of the 600 audio files
 You can simply download the repository by using the following command:
 
 ```
-git clone https://github.com/xuyaoxun/SECaps.git
+git clone https://github.com/thuhcsi/SECap.git
 ```
 
 ## Installation
@@ -30,13 +30,21 @@ conda env create -f environment.yml
 ```
 
 ## Pretrained Model
-You can download the pretrained model from [kuake pandownload](https://pan.quark.cn/s/1c3deee6cd68) or [google drive](https://drive.google.com/file/d/11q_ZXj0wXnLcw3nH-m8LyI_egMMDaMvR/view?usp=drive_link) and put it in the main folder.
+You need to download two fils to run the code. The first one is the "model.ckpt", which is the pretrained model of the SECaps. The second one is the "weights", which is the required weights of dependencies.
 
-Also, you need to download the pretrained weights folder from [kuake pandownload](https://pan.quark.cn/s/53891d06c3db) or [google drive](https://drive.google.com/file/d/1wDmijmOhvpgCXdlwvJ_XWm4QsPzLJxFk/view?usp=drive_link) and put it in the main folder.
+If you download the "weights.7z", you need to unzip it.
+
+Then you need to put the two files in the main folder(SECap).
 
 ---
 
-Meanwhile. we have provided the pretrained checkpoints in the huggingface model hub. You can download the pretrained checkpoints from [here](https://huggingface.co/yaoxunxu/SECaps) and put it in the main folder.
+You can download the "model.ckpt" from [kuake pandownload](https://pan.quark.cn/s/1c3deee6cd68) or [google drive](https://drive.google.com/file/d/11q_ZXj0wXnLcw3nH-m8LyI_egMMDaMvR/view?usp=drive_link) and put it in the main folder.
+
+You can download the "weights" from [kuake pandownload](https://pan.quark.cn/s/53891d06c3db) or [google drive](https://drive.google.com/file/d/1wDmijmOhvpgCXdlwvJ_XWm4QsPzLJxFk/view?usp=drive_link) and put it in the main folder.
+
+---
+
+Meanwhile. we have provided the pretrained checkpoints in the huggingface model hub. You can also download from [here](https://huggingface.co/yaoxunxu/SECaps) and put it in the main folder.
 
 ---
 
