@@ -34,7 +34,7 @@ You need to download two fils to run the code. The first one is the "model.ckpt"
 
 If you download the "weights.7z", you need to unzip it.
 
-Then you need to put the two files in the main folder(SECap).
+Then you need to put the "model.ckpt" file and "weights" folder in the main folder(SECap).
 
 ---
 
