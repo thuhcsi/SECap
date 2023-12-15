@@ -32,7 +32,11 @@ conda env create -f environment.yml
 ## Pretrained Model
 You need to download two fils to run the code. The first one is the `model.ckpt`, which is the pretrained model of the SECaps. The second one is the `weights`, which is the required weights of dependencies.
 
-If you download the `weights.7z`, you need to unzip it.
+If you download the `weights.tar.gz`, you need to unzip it and put the files in `weights` folder.
+
+```
+tar -xvf weights.tar.gz -C path/to/SECap
+```
 
 Then you need to put the `model.ckpt` file and `weights` folder in the main folder(SECap).
 
@@ -40,11 +44,11 @@ Then you need to put the `model.ckpt` file and `weights` folder in the main fold
 
 You can download the `model.ckpt` from [kuake pandownload](https://pan.quark.cn/s/1c3deee6cd68) or [google drive](https://drive.google.com/file/d/11q_ZXj0wXnLcw3nH-m8LyI_egMMDaMvR/view?usp=drive_link) and put it in the main folder.
 
-You can download the `weights` from [kuake pandownload](https://pan.quark.cn/s/53891d06c3db) or [google drive](https://drive.google.com/file/d/1wDmijmOhvpgCXdlwvJ_XWm4QsPzLJxFk/view?usp=drive_link) and put it in the main folder.
+You can download the `weights` from [kuake pandownload](https://pan.quark.cn/s/53891d06c3db) or `weights.7z` from [google drive](https://drive.google.com/file/d/1wDmijmOhvpgCXdlwvJ_XWm4QsPzLJxFk/view?usp=drive_link) and put it in the main folder.
 
 ---
 
-Meanwhile. we have provided the pretrained checkpoints in the huggingface model hub. You can also download from [here](https://huggingface.co/yaoxunxu/SECaps) and put it in the main folder.
+Meanwhile. we have provided the pretrained checkpoints in the huggingface model hub. You can also download `model.ckpt` and `weights.tar.gz`from [here](https://huggingface.co/yaoxunxu/SECaps). 
 
 ---
 
