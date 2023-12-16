@@ -44,7 +44,7 @@ Then you need to put the `model.ckpt` file and `weights` folder in the main fold
 
 You can download the `model.ckpt` from [kuake pandownload](https://pan.quark.cn/s/1c3deee6cd68) or [google drive](https://drive.google.com/file/d/11q_ZXj0wXnLcw3nH-m8LyI_egMMDaMvR/view?usp=drive_link) and put it in the main folder.
 
-You can download the `weights` from [kuake pandownload](https://pan.quark.cn/s/53891d06c3db) or `weights.7z` from [google drive](https://drive.google.com/file/d/1wDmijmOhvpgCXdlwvJ_XWm4QsPzLJxFk/view?usp=drive_link) and put it in the main folder.
+You can download the `weights` from [kuake pandownload](https://pan.quark.cn/s/53891d06c3db) or `weights.tar.gz` from [google drive](https://drive.google.com/file/d/1drs4-i5g8Ta7OVjriKU3vJTshj2Va9_B/view?usp=drive_link) and put it in the main folder.
 
 ---
 
