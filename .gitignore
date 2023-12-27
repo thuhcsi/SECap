@@ -1,2 +1,7 @@
 model.ckpt
 weights/
+ft_local/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
