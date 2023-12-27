@@ -108,9 +108,11 @@ It uses the prompt"请用中文用一句话描述上面给出的音频中说话�
 
 If you use this repository in your research, please kindly cite our paper:
 
+```
 @article{xu2023secap,
   title={SECap: Speech Emotion Captioning with Large Language Model},
   author={Xu, Yaoxun and Chen, Hangting and Yu, Jianwei and Huang, Qiaochu and Wu, Zhiyong and Zhang, Shixiong and Li, Guangzhi and Luo, Yi and Gu, Rongzhi},
   journal={arXiv preprint arXiv:2312.10381},
   year={2023}
 }
+```
