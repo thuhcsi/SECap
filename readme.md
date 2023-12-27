@@ -2,7 +2,9 @@
 
 ![model](picture/model.png)
 
-This repository contains the implementation of the paper "SECap: Speech Emotion Captioning with Large Language Model". It includes the model code, training and testing scripts, and a test dataset. The test dataset consists of 600 wav audio files and their corresponding emotion descriptions.
+This repository contains the implementation of the paper "SECap: Speech Emotion Captioning with Large Language Model".Please refer to our paper for more details: [SECap: Speech Emotion Captioning with Large Language Model](https://arxiv.org/abs/2312.10381). 
+
+The repo includes the model code, training and testing scripts, and a test dataset. The test dataset consists of 600 wav audio files and their corresponding emotion descriptions.
 
 ## Datset
 We public the 600-test dataset in the `dataset` folder. The dataset consists of 600 wav audio files and their corresponding emotion descriptions. 
