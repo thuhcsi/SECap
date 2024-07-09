@@ -2,7 +2,7 @@
 
 ![model](picture/model.png)
 
-This repository contains the implementation of the paper "SECap: Speech Emotion Captioning with Large Language Model".Please refer to our paper for more details: [SECap: Speech Emotion Captioning with Large Language Model](https://arxiv.org/abs/2312.10381). 
+This repository contains the implementation of the paper "SECap: Speech Emotion Captioning with Large Language Model".Please refer to our paper for more details:SECap: Speech Emotion Captioning with Large Language Model [on AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/29902), [on arxiv](https://arxiv.org/abs/2312.10381). 
 
 The repo includes the model code, training and testing scripts, and a test dataset. The test dataset consists of 600 wav audio files and their corresponding emotion descriptions.
 
@@ -111,10 +111,13 @@ It uses the prompt"请用中文用一句话描述上面给出的音频中说话�
 If you use this repository in your research, please kindly cite our paper:
 
 ```
-@article{xu2023secap,
-  title={SECap: Speech Emotion Captioning with Large Language Model},
-  author={Xu, Yaoxun and Chen, Hangting and Yu, Jianwei and Huang, Qiaochu and Wu, Zhiyong and Zhang, Shixiong and Li, Guangzhi and Luo, Yi and Gu, Rongzhi},
-  journal={arXiv preprint arXiv:2312.10381},
-  year={2023}
+@inproceedings{xu2024secap,
+  title={Secap: Speech emotion captioning with large language model},
+  author={Xu, Yaoxun and Chen, Hangting and Yu, Jianwei and Huang, Qiaochu and Wu, Zhiyong and Zhang, Shi-Xiong and Li, Guangzhi and Luo, Yi and Gu, Rongzhi},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={17},
+  pages={19323--19331},
+  year={2024}
 }
 ```
